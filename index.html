@@ -13,12 +13,8 @@
         $('#data').dataTable({
           "bPaginate": false,
           "bInfo": false,
+					"bFilter": false,
           "bStateSave": true,
-          "oSearch": {
-            "bRegex": true,
-            "bSmart": false
-          },
-          // default sort by name
           "aaSorting": [[0, "asc"]]
         });
       });
