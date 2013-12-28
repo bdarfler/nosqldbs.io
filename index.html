@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="dataTables.bootstrap.css">
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
     <script src="dataTables.bootstrap.js"></script>
     <script>
@@ -20,6 +21,7 @@
           "aaSorting": [[0, "asc"]]
         });
       });
+		  $('abbr').tooltip({});
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -39,9 +41,9 @@
         <thead>
           <tr>
             <th class="name">Name</th>
-            <th class="cap">CAP</th>
-            <th class="acid">ACID</th>
-            <th class="cas">CAS</th>
+            <th class="cap"><abbr title="Consistency, Availablity, Partition Tolerance">CAP</abbr></th>
+            <th class="acid"><abbr title="Atomicity, Consistency, Isolation, Durability">ACID</abbr></th>
+            <th class="cas"><abbr title="Compare and Swap">CAS</abbr></th>
             <th class="indexes">Indexes</th>
             <th class="data-model">Data Model</th>
             <th class="license">License</th>
