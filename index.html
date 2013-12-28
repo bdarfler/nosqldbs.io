@@ -61,7 +61,7 @@
             <td class="name"><a href="https://cassandra.apache.org/">Cassandra</a></td>
             <td class="cap">AP</td>
             <td class="acid">No</td>
-            <td class="cas">Yes</td>
+            <td class="cas">Yes<sup>3</sup></td>
             <td class="indexes">Yes</td>
             <td class="data-model">Wide Column</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -70,7 +70,7 @@
             <td class="name"><a href="http://basho.com/riak/">Riak</a></td>
             <td class="cap">AP</td>
             <td class="acid">No</td>
-            <td class="cas">Yes</td>
+            <td class="cas">Yes<sup>3</sup></td>
             <td class="indexes">Yes</td>
             <td class="data-model">Key Value</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -114,7 +114,7 @@
           <tr>
             <td class="name"><a href="http://www.aerospike.com/">Aerospike</a></td>
             <td class="cap">CP</td>
-            <td class="acid">No</td>
+            <td class="acid">No<sup>4<sup></td>
             <td class="cas">Yes</td>
             <td class="indexes">Yes</td>
             <td class="data-model">Document</td>
@@ -125,7 +125,7 @@
             <td class="cap">CP</td>
             <td class="acid">Yes</td>
             <td class="cas">Yes</td>
-            <td class="indexes">No</td>
+            <td class="indexes">No<sup>1</sup></td>
             <td class="data-model">Key Value</td>
             <td class="license">Proprietary</td>
           </tr>
@@ -141,7 +141,7 @@
           <tr>
             <td class="name"><a href="http://hyperdex.org/">HyperDex</a></td>
             <td class="cap">CP</td>
-            <td class="acid">Yes</td>
+            <td class="acid">Yes<sup>2</sup></td>
             <td class="cas">Yes</td>
             <td class="indexes">Yes</td>
             <td class="data-model">Document</td>
@@ -149,6 +149,17 @@
           </tr>
         </tbody>
       </table>
+      <p>
+        <small>
+          1 Easy to implement with ACID transactions
+          <br/>
+          2 Using <a href="http://hyperdex.org/warp/">HyperDex Warp</a>
+          <br/>
+          3 CAS operations are CP not AP
+          <br/>
+          4 Supports consistent snapshot reads
+        </small>
+      </p>
       <br/>
     </div>
     <div class="well">
