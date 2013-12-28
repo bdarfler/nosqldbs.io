@@ -44,8 +44,7 @@
           <tr>
             <th class="name">Name</th>
             <th class="cap-tradeoff"><abbr title="Consistency, Availablity, Partition Tolerance">CAP</abbr> Tradeoff</th>
-            <th class="acid-transactions"><abbr title="Atomicity, Consistency, Isolation, Durability">ACID</abbr> Transactions</th>
-            <th class="atomic-operations">Atomic Operations</th>
+            <th class="transactions">Transactions</th>
             <th class="indexes">Indexes</th>
             <th class="data-model">Data Model</th>
             <th class="license">License</th>
@@ -55,8 +54,7 @@
           <tr>
             <td class="name"><a href="http://www.mongodb.org/">MongoDB</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Conditional Writes</td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Document</td>
             <td class="license"><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL v3</a></td>
@@ -64,8 +62,7 @@
           <tr>
             <td class="name"><a href="https://cassandra.apache.org/">Cassandra</a></td>
             <td class="cap-tradeoff">Availability</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations"><abbr title="CAS operations are CP not AP">Yes</abbr></td>
+            <td class="transactions"><abbr title="Conditional Writes are CP not AP">Conditional Writes</abbr></td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Wide Column</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -73,8 +70,7 @@
           <tr>
             <td class="name"><a href="http://basho.com/riak/">Riak</a></td>
             <td class="cap-tradeoff">Availability</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations"><abbr title="CAS operations are CP not AP">Yes</abbr></td>
+            <td class="transactions"><abbr title="Compare and Swap operations are CP not AP">Compare and Swap</abbr></td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Key Value</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -82,8 +78,7 @@
           <tr>
             <td class="name"><a href="https://hbase.apache.org/">HBase</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Conditional Writes</td>
             <td class="indexes">Primary Only</td>
             <td class="data-model">Wide Column</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -91,8 +86,7 @@
           <tr>
             <td class="name"><a href="https://accumulo.apache.org/">Accumulo</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Conditonal Writes</td>
             <td class="indexes">Primary Only</td>
             <td class="data-model">Wide Column</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -100,8 +94,7 @@
           <tr>
             <td class="name"><a href="http://hypertable.org/">Hypertable</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">No</td>
+            <td class="transactions">None</td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Wide Column</td>
             <td class="license"><a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL v3</a></td>
@@ -109,8 +102,7 @@
           <tr>
             <td class="name"><a href="http://www.rethinkdb.com/">RethinkDB</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Conditional Writes</td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Document</td>
             <td class="license"><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL v3</a></td>
@@ -118,8 +110,7 @@
           <tr>
             <td class="name"><a href="http://www.aerospike.com/">Aerospike</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions"><abbr title="Supports consistent snapshot reads">No</abbr></td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Compare and Swap</td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Document</td>
             <td class="license">Proprietary</td>
@@ -127,8 +118,7 @@
           <tr>
             <td class="name"><a href="https://foundationdb.com/">FoundationDB</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions">Yes</td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions">Mulit-Key ACID</td>
             <td class="indexes"><abbr title="Easy to implement with ACID transactions">Primary Only</abbr></td>
             <td class="data-model">Key Value</td>
             <td class="license">Proprietary</td>
@@ -136,8 +126,7 @@
           <tr>
             <td class="name"><a href="http://www.project-voldemort.com/">Voldemort</a></td>
             <td class="cap-tradeoff">Availability</td>
-            <td class="acid-transactions">No</td>
-            <td class="atomic-operations">No</td>
+            <td class="transactions">None</td>
             <td class="indexes">Primary Only</td>
             <td class="data-model">Key Value</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -145,8 +134,7 @@
           <tr>
             <td class="name"><a href="http://hyperdex.org/">HyperDex</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="acid-transactions"><abbr title="Using HyperDex Warp">Yes</abbr></td>
-            <td class="atomic-operations">Yes</td>
+            <td class="transactions"><abbr title="Using HyperDex Warp">Mulit-Key ACID</abbr></td>
             <td class="indexes">Global Secondary</td>
             <td class="data-model">Document</td>
             <td class="license"><a href="http://opensource.org/licenses/BSD-3-Clause">BSD New</a></td>
