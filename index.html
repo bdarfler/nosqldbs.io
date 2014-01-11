@@ -47,7 +47,7 @@
           <tr>
             <td class="name"><a href="http://basho.com/riak/">Riak</a></td>
             <td class="cap-tradeoff">Availability</td>
-            <td class="transactions"><abbr title="Compare and Swap operations are CP not AP">Compare and Swap</abbr></td>
+            <td class="transactions"><abbr title="Check and Set operations are CP not AP">Check and Set</abbr></td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Key Value</td>
             <td class="license"><a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache v2.0</a></td>
@@ -87,7 +87,7 @@
           <tr>
             <td class="name"><a href="http://www.aerospike.com/">Aerospike</a></td>
             <td class="cap-tradeoff">Consistency</td>
-            <td class="transactions">Compare and Swap</td>
+            <td class="transactions">Check and Set</td>
             <td class="indexes">Local Secondary</td>
             <td class="data-model">Document</td>
             <td class="license">Proprietary</td>
@@ -118,7 +118,13 @@
           </tr>
         </tbody>
       </table>
-      <br/>
+			<p>
+        <small>
+          1 Check and Set - Perform a write only if the object version hasn't changed
+					<br/>
+					2 Conditional Write - Perform a write only if the object satisfies some condition
+        </small>
+      </p>
     </div>
     <div class="well">
       <p>
